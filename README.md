@@ -13,4 +13,4 @@ on the web portal
 the development process.
 
 
-Demo Link: https://test1.linkmedicine.com/app/aboutTheDisease/mostRecentUpdates
+Demo Link: test1.linkmedicine.com
