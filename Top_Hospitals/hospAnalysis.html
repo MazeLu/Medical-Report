@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Analysis</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap.vertical-tabs.min.css">
+    <link rel="stylesheet" href="bootstrap-multiselect.css">
+    <link rel="stylesheet" href="ngProgress.css">
+    <link rel="stylesheet" href="http://mbenford.github.io/ngTagsInput/css/ng-tags-input.min.css" />
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="lsmed.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/globalize/1.4.0/globalize-runtime.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://www.amcharts.com/lib/4/core.js"></script>
+    <script src="https://www.amcharts.com/lib/4/charts.js"></script>
+    <script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
+    <script src="jvenn.min.js"></script>
+    <script type="text/javascript" src="bootstrap-multiselect.js"></script>
+    <script type="text/javascript" src="angular-bootstrap-multiselect.js"></script>
+    <script type="text/javascript" src="jquery.blockUI.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyChLxtQM2oKlrIfboGL3bhw0sQOKTmPsvQ"></script>
+    <script src="ngProgress.min.js"></script>
+    <script src="http://mbenford.github.io/ngTagsInput/js/ng-tags-input.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="lsmed.js"></script>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="header header-banner active container-fluid">
+            <div class="hospital-info container-fluid">
+                <img class="hosp_logo" id="ha-hosplogo" src="https://linkmedicine.com/wp-content/uploads/hosp_logos/" alt="Hospital Logo">
+                <!--<h2 id="hosp-name"><span id="ha-hospname" style="font-size: 30px;"></span></h2>-->
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4"></div>
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                    <h4 id="hosp-loc"><span id="ha-hospcity"></span>&nbsp;&nbsp;<span id="ha-hospstate"></span></h4>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4"></div>
+            </div>
+
+            <div class="container-fluid">
+                <div class="col-sm-3 col-xs-1"></div>
+                <div class="banner-container col-sm-6 col-xs-10">
+                    <div class="col-xs-3" id="banner">
+                        <h3>#<span id="ha-hosprank"></span></h3>
+                    </div>
+                    <div class="col-xs-9 dkw">
+                        in <span id="ha-dkw"> </span> from <span id="ha-all-tophosps-count"> </span> top hosptials and <span id="ha-all-hosps-count"> 200+ </span> expertise hospitals
+                    </div>
+                </div>
+                <div class="col-sm-3 col-xs-1"></div>
+            </div>
+        </div>
+
+        <div class="col-xs-12 analysis">
+            <div class="tab-content">
+                <div class="tab-pane active" id="1"></div>
+                <div class="tab-pane" id="2"></div>
+                <div class="tab-pane" id="3"></div>
+            </div>
+            <div class="tab-container nav nav-tabs">
+                <div class="button-container nav-item">
+                    <button id="tab1" class="nav-link active">
+          <i class="fas fa-clipboard-list"></i>
+        </button>
+                    <button id="tab2" class="nav-link">
+          <i class="far fa-chart-bar" id="chart-icon"></i>
+        </button>
+                    <button id="tab3" class="nav-link" data-toggle="tab">
+          <i class="fas fa-map-marker-alt"></i>
+        </button>
+                </div>
+                <div class="tab-panel">
+                    <!--<div class="banner-container">
+                  <div class="col-xs-12" id="banner">
+                    <h3>#<span id="ha-hosprank2"></span></h3>
+                  </div>
+                  <div class="col-sm-8 dkw">
+                    <h4>in <span id="ha-dkw2"> </span></h4>
+                  </div>
+                </div>-->
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                            <div id="dkw-description">
+                                <p id="ha-dkw-descrp">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec aliquam ac ligula id luctus. Sed rutrum tempus sodales. Vivamus a facilisis nulla, at aliquet velit. Fusce tempus et velit a efficitur. Pellentesque habitant
+                                    morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec suscipit hendrerit tristique.</p>
+                            </div>
+                            <div class="button-container"><button type="submit" id="learn-more">Learn More</button></div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                            <div class="gauge-chart">
+                            </div>
+                            <div>
+                                Expertise Score
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <hr>
+                    <br>
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                            <div class="col-xs-12">
+                                <div style="text-align: left;">Scientific Research</div>
+                                <div class="progress">
+                                    <div class="progress-bar hosp-sr-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:80%"></div>
+                                </div>
+                                <div style="text-align: left;">Advanced Treatments</div>
+                                <div class="progress">
+                                    <div class="progress-bar hosp-at-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:90%"></div>
+                                </div>
+                                <div style="text-align: left;">Clinical Excellence</div>
+                                <div class="progress">
+                                    <div class="progress-bar hosp-cpd-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:70%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                            <div id="dkw-description111">
+                                <p id="ha-dkw-descrp111"></p>
+                            </div>
+                            <div class="button-container"><button type="submit" id="learn-more">Learn More</button></div>
+                        </div>
+                    </div>
+                    <br>
+                    <hr>
+                    <br>
+                    <div class="row">
+
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                            <div id="rank-statistics">
+                                <h4 id="ha-dkw3-title"></h4>
+                                <p>For <span id="ha-dkw3"> </span>, <span id="ha-hospname3"></span> is #<span id="ha-hosp-rankintervention"></span> in Therapeutic Investigation, #
+                                    <span id="ha-hosp-rankPi"></span> in Associated Experts, #<span id="ha-hosp-ranknct"></span> in Clinical Excellence, #<span id="ha-hosp-rankproj"></span> in Frontier Research, and #<span id="ha-hosp-rankfunding"></span>                                    in Federal Support.</p>
+                            </div>
+                            <div class="button-container"><button type="submit" id="learn-more">Learn More</button></div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                            <div class="tabcontent" id="radar">
+                                <div class="radar-layout">
+                                    <div class="chart">
+                                        <canvas id="radar-chart"></canvas>
+                                    </div>
+                                    <!--
+                <div class="key">
+                  <div class="radar-key-container">
+                    <div class="col-sm-8 radar-marker1">Frontier Research</div>
+                    <div class="col-sm-4" id="radarScore1"></div>
+                  </div>
+                  <div class="col-xs-12 row-buffer"></div>
+                  <div class="radar-key-container">
+                    <div class="col-sm-8 radar-marker2">Associated Experts</div>
+                    <div class="col-sm-4" id="radarScore2"></div>
+                  </div>
+                  <div class="col-xs-12 row-buffer"></div>
+                  <div class="radar-key-container">
+                    <div class="col-sm-8 radar-marker3">Clinical Excellence</div>
+                    <div class="col-sm-4" id="radarScore3"></div>
+                  </div>
+                  <div class="col-xs-12 row-buffer"></div>
+                  <div class="radar-key-container">
+                    <div class="col-sm-8 radar-marker4">Therapeutic Investigation</div>
+                    <div class="col-sm-4" id="radarScore4"></div>
+                  </div>
+                  <div class="col-xs-12 row-buffer"></div>
+                  <div class="radar-key-container">
+                    <div class="col-sm-8 radar-marker5">Federal Support</div>
+                    <div class="col-sm-4" id="radarScore5"></div>
+                  </div>
+                </div>
+                -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-panel second-tab">
+                    <div class="vert-tabs col-sm-3">
+                        <button id="tablinks3">Physicians</button>
+                    </div>
+                    <div class="tabcontent col-sm-9">
+                        <table class="table table-striped">
+                            <tbody id="physician-list">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="tab-panel">
+                    <div class="map-container">
+                        <div id="data-map">
+                            <div>
+                                <label class="radio-inline"><input type="radio" name="showMaps" value="current" checked>View
+                Current</label>
+                                <label class="radio-inline"><input type="radio" name="showMaps" value="all">View All hospitals</label>
+                            </div>
+                            <div id="hospitals_map" class="center-block" align='center' style="display: none; margin: 0 auto;"></div>
+                            <div id="current_hospital_map" class="center-block" align='center' style="display: block; margin: 0 auto;"></div>
+                        </div>
+                        <div id="staticData">
+                            Institutional Information
+                            <table class="table table-striped">
+                                <tbody>
+                                    <tr class="loc-data">
+                                        <td class="table-label">Location: </td>
+                                        <td class="table-value" id="ha-location"></td>
+                                    </tr>
+                                    <tr class="founded-data">
+                                        <td class="table-label">Year Founded: </td>
+                                        <td class="table-value" id="ha-hospcreate"></td>
+                                    </tr>
+                                    <tr class="beds-data">
+                                        <td class="table-label">Number of Beds: </td>
+                                        <td class="table-value" id="ha-hospbeds"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="hosp-address">
+                            <div id="map"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="intro-container container-fluid">
+                <h4 class="intro-title">About This Hospital</h4>
+                <div class="description">
+                    <p id="ha-hospdscrp"></p>
+                </div>
+                <div class="contact-button">
+                    <button id="contact2">Contact This Hospital</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

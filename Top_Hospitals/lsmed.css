@@ -1,0 +1,2145 @@
+@import "compass/css3";
+body::-webkit-scrollbar {
+    width: 8px;
+    background-color: #eee;
+}
+
+body::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: #1eb0bc;
+}
+
+body ::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.lsmed .top-buffer {
+    margin-top: 20px;
+}
+
+.vNav {
+    width: 25% !important;
+}
+
+.vTab {
+    width: 75%;
+}
+
+.vNav,
+.vTab {
+    position: relative;
+    float: left;
+    min-height: 1px;
+}
+
+.vNav-tabs {
+    border-bottom: 0;
+}
+
+.vNav-tabs>li.active>a,
+.vNav-tabs>li.active>a:hover,
+.vNav-tabs>li.active>a:focus {
+    color: #555;
+    background-color: #fff;
+    border-left: 1px solid #ddd;
+}
+
+
+/*****signle hospital page ******/
+
+.header-banner {
+    background-color: #e3f5f7;
+}
+
+.header-banner .hospital-info img {
+    position: relative;
+    display: block;
+    width: 200px;
+    height: auto;
+    margin: 40px auto 20px auto;
+}
+
+.header-banner .hospital-info #hosp-loc {
+    position: relative;
+    font-size: 20px;
+    text-align: center;
+}
+
+.header-banner .banner-container {
+    position: relative;
+}
+
+.header-banner .banner-container h4 {
+    color: #1EB0BC;
+}
+
+.intro-container {
+    background-color: #1EB0BC;
+    position: relative;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    color: white;
+    padding: 40px;
+}
+
+.intro-container h4 {
+    text-align: center;
+    font-weight: bold;
+    color: white;
+}
+
+.description {
+    text-align: justify;
+    color: white;
+    font-size: 16px;
+}
+
+#contact2 {
+    display: block;
+    width: 400px;
+    height: 60px;
+    font-size: 24px;
+    margin: 40px auto 0 auto;
+    background-color: white;
+    color: #1EB0BC;
+    border: 2px solid #1EB0BC;
+}
+
+#contact2:hover {
+    background-color: #1EB0BC;
+    color: white;
+    border: 2px solid white;
+}
+
+#donut-chart {
+    font-family: Arial;
+    position: absolute;
+    left: 50%;
+    margin-left: -205px;
+    z-index: -10;
+}
+
+.donut-key-container0 {
+    font-size: 14px;
+    margin-top: 120px;
+    margin-left: 40px;
+    text-align: left;
+}
+
+.donut-key-container {
+    position: relative;
+    font-size: 14px;
+    margin-top: 70px;
+    margin-left: 40px;
+    text-align: left;
+}
+
+.donut-marker1,
+.donut-marker2,
+.donut-marker3 {
+    height: 5px;
+    width: 10px;
+    margin-top: 14px;
+}
+
+.donut-marker1 {
+    background-color: #BC1E61;
+}
+
+.donut-marker2 {
+    background-color: #FF7E0D;
+}
+
+.donut-marker3 {
+    background-color: #1E61BC;
+}
+
+#labelOverlay {
+    width: 90px;
+    height: 40px;
+    position: absolute;
+    top: 233px;
+    left: 205px;
+    text-align: center;
+    cursor: default;
+}
+
+#labelOverlay p {
+    line-height: 0.3;
+    padding: 0;
+    margin: 8px;
+}
+
+#labelOverlay p.used-size {
+    line-height: 0.5;
+    font-size: 20pt;
+    color: #8e8e8e;
+}
+
+#labelOverlay p.total-size {
+    line-height: 0.5;
+    font-size: 12pt;
+    color: #cdcdcd;
+}
+
+.tab-container {
+    width: 100%;
+    height: 100%;
+    margin: 80px auto;
+    border-bottom: none;
+    padding-bottom: 40px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.tab-container .button-container button {
+    width: 33.333%;
+    height: 60px;
+    float: left;
+    border-bottom: 1px solid #1EB0BC;
+    font-size: 28px;
+    background-color: white;
+    color: #1eb0bc;
+}
+
+.tab-container .button-container button:hover {
+    background-color: #1eb0bc;
+    color: white;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+}
+
+.tab-container .tab-panel {
+    margin-top: 80px;
+    color: #1eb0bc;
+    text-align: center;
+    box-sizing: border-box;
+    font-size: 18px;
+    padding: 40px;
+}
+
+.tab-container .tab-panel .dkw h4 {
+    color: #1eb0bc;
+    font-size: 24px;
+    padding-top: 5px;
+    white-space: nowrap;
+    float: left;
+}
+
+#analysisTabs {
+    width: 1075px;
+    margin: 100px auto;
+}
+
+.vert-tabs {
+    float: left;
+    width: 18%;
+    margin-right: 25px;
+}
+
+.vert-tabs button {
+    background-color: white;
+    display: block;
+    color: #1eb0bc;
+    width: 100%;
+    text-align: left;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-left: none;
+    border-top: none;
+    border-right: none;
+}
+
+.vert-tabs button:hover {
+    background-color: #1eb0bc;
+    color: white;
+    border: none;
+}
+
+.tabcontent {
+    color: #1eb0bc;
+    text-align: center;
+    font-size: 18px;
+}
+
+.tab-panel .banner-container {
+    position: absolute;
+    margin-left: 100px;
+    margin-top: 70px;
+}
+
+#rank-statistics {
+    text-align: justify;
+    font-size: 18px;
+}
+
+#dkw-description,
+#dkw-description111,
+#rank-statistics {
+    color: #555;
+    text-align: left;
+}
+
+.gauge-chart {
+    position: relative;
+    float: right;
+    height: 280px;
+    width: 320px;
+    margin-right: 100px;
+}
+
+#learn-more {
+    position: relative;
+    height: 50px;
+    width: 200px;
+    margin: 20px auto 0 100px;
+    background-color: #1eb0bc;
+    font-size: 20px;
+    color: white;
+}
+
+#learn-more:hover {
+    background-color: white;
+    color: #1EB0BC;
+    border: 2px solid #1EB0BC;
+}
+
+.chart {
+    float: left;
+    width: 560px;
+    height: 460px;
+}
+
+.key {
+    width: 200px;
+    float: right;
+    margin-left: 20px;
+}
+
+.chart-header,
+.key-header {
+    background-color: #e3f5f7;
+    font-size: 20px;
+    border-bottom: 1px solid #1eb0bc;
+    padding: 8px;
+}
+
+#radar-chart {
+    padding: 20px;
+    font-size: 18px;
+}
+
+.row-buffer {
+    margin-top: 15px;
+}
+
+.bar-key-container {
+    position: relative;
+    font-size: 14px;
+    margin-top: 70px;
+    margin-left: 40px;
+    text-align: left;
+}
+
+.bar-marker1,
+.bar-marker2,
+.bar-marker3,
+.bar-marker4,
+.bar-marker5 {
+    height: 5px;
+    width: 10px;
+    margin-top: 14px;
+}
+
+.bar-marker1 {
+    background-color: #BC1E61;
+}
+
+.bar-marker2 {
+    background-color: #FF7E0D;
+}
+
+.bar-marker3 {
+    background-color: #B0BC1E;
+}
+
+.bar-marker4 {
+    background-color: #1EB0BC;
+}
+
+.bar-marker5 {
+    background-color: #1E61BC;
+}
+
+.radar-key-container {
+    position: relative;
+    font-size: 14px;
+    margin-top: 70px;
+    margin-left: 20px;
+    text-align: left;
+}
+
+.details {
+    position: absolute;
+    height: 115px;
+    width: 570px;
+    display: inline-block;
+    left: 50%;
+    margin-left: -285px;
+    margin-top: 515px;
+    border: 1px solid #1eb0bc;
+}
+
+.top-buffer a {
+    color: #1eb0bc;
+}
+
+.map-container {
+    position: relative;
+    width: 100%;
+}
+
+#data-map {
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#map {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    height: 117px;
+    width: 350px;
+}
+
+#map-scrollbar {
+    position: absolute;
+    top: 50%;
+    left: 49%;
+    transform: translate(-50%, -50%);
+    color: #ed4e6e;
+    font-family: arial;
+    font-size: 55px;
+}
+
+.hosp-address {
+    position: absolute;
+    right: 0;
+    text-align: center;
+    font-size: 18px;
+    margin-right: 17px;
+    width: 350px;
+}
+
+map-container::-webkit-scrollbar {
+    width: 8px;
+    background-color: #eee;
+}
+
+map-container::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: #1eb0bc;
+}
+
+map-container::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+#staticData {
+    position: relative;
+    float: left;
+    margin-right: 20px;
+    width: 600px;
+    border-bottom: 1px solid #ddd;
+}
+
+.table-label {
+    text-align: left;
+    font-size: 16px;
+    color: #444;
+}
+
+.table-value {
+    position: absolute;
+    left: 50%;
+    text-align: center;
+    font-size: 16px;
+}
+
+.lsmed .tab-content {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.divTable {
+    display: table;
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+}
+
+.divTableRow {
+    display: table-row;
+}
+
+.divTableCell {
+    border-left: 1px solid #ddd;
+    border-top: 1px solid #ddd;
+    display: table-cell;
+    padding: 3px 10px;
+}
+
+.divTableBody {
+    display: table-row-group;
+}
+
+.divTableBody>:first-child {
+    background-color: #1eb0bc !important;
+    opacity: 0.8;
+    font-weight: bold;
+    color: white;
+}
+
+.divTableBody>:nth-child(odd) {
+    background-color: #E3F5F7;
+}
+
+.divTableRow>:last-child {
+    border-right: 1px solid #ddd;
+}
+
+.tophospRank {
+    margin-left: 5px;
+    padding-left: 5px;
+    float: left;
+    width: 14%;
+}
+
+.hospCheckbox {
+    padding-top: 30px;
+    padding-left: 30px;
+}
+
+#banner {
+    width: 60px;
+    height: 60px;
+    position: relative;
+    margin-top: 0px;
+    margin-left: 5px;
+    margin-bottom: 40px;
+    padding-left: 10px;
+    background: linear-gradient(orange, #FF7E0D);
+    border: 1px solid #FF7E0D;
+}
+
+#banner:after {
+    content: "";
+    position: absolute;
+    bottom: -26px;
+    left: -1px;
+    width: 0;
+    height: 0;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-top: 25px solid #FF7E0D;
+}
+
+#banner h3 {
+    font-size: 32px;
+    color: white;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.topHospName {
+    text-align: center;
+    color: #444;
+    margin-bottom: -10px;
+}
+
+.topHospLoc {
+    text-align: center;
+    color: #1eb0bc;
+    margin-bottom: 15px;
+}
+
+.btn-primary,
+.btn-default {
+    display: block;
+    padding: 6px 20px;
+    border-radius: 0;
+    margin: auto;
+}
+
+.btn-primary {
+    background-color: #1eb0bc;
+    border-color: #1eb0bc;
+    width: 120px;
+    margin-right: 12px;
+    color: white;
+}
+
+.btn-primary:hover,
+.book-appt:hover {
+    background-color: white;
+    color: #1EB0BC;
+    border-color: #1EB0BC;
+}
+
+.btn-default {
+    width: 120px;
+    margin-left: 12px;
+}
+
+.progress-bar {
+    background-color: #CD56C4;
+    opacity: .5;
+}
+
+.lessRows .progress-bar {
+    background-color: #bebebe;
+    opacity: .5;
+}
+
+.hospitomics {
+    position: relative;
+}
+
+#hospTable {
+    vertical-align: bottom;
+}
+
+.outer-star {
+    position: relative;
+    display: inline-block;
+}
+
+.inner-star {
+    position: absolute;
+    top: 0;
+    left: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+}
+
+.outer-star::before {
+    content: "\f005 \f005 \f005 \f005 \f005";
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    color: #ccc;
+}
+
+.inner-star::before {
+    content: "\f005 \f005 \f005 \f005 \f005";
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    color: orange;
+}
+
+.alert-info {
+    color: #1EB0BC;
+    background-color: #E3F5F7;
+    border-color: #8FD7DE;
+}
+
+.tophospRank .moreData {
+    display: block;
+    padding-left: 10px;
+}
+
+
+/**---------------
+ search bar
+------------------*/
+
+.searchBar {
+    position: relative;
+    top: -80px;
+    z-index: 100;
+    width: 50%;
+    margin: 0 auto;
+    box-shadow: 0px 0px 30px white;
+}
+
+
+/*--------------------------------------------------------------
+Circles on homepage
+--------------------------------------------------------------*/
+
+.circle {
+    width: 165px;
+    height: 165px;
+    border: 2px solid #1eb0bc;
+    border-radius: 50%;
+    float: left;
+    color: #1eb0bc;
+    text-align: center;
+    margin: -20px 25px 70px 25px;
+}
+
+.circle:hover {
+    color: #FFC300;
+    border-color: #FFC300;
+}
+
+.circleBanner h1 {
+    margin-top: 80px;
+}
+
+.circleText {
+    display: inline-block;
+    line-height: 165px;
+    margin: 0 auto;
+    font-size: 28px;
+}
+
+.circleSimple {
+    font-size: 28px;
+}
+
+.circleRow {
+    clear: both;
+    width: 90%;
+    margin: 0px auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.circleRow img {
+    width: 40px;
+    height: 10px;
+    animation: arrow 2s infinite;
+}
+
+@keyframes arrow {
+    0% {
+        margin-top: 0;
+        margin-bottom: 15px;
+    }
+    25% {
+        margin-top: -3px;
+        margin-bottom: 18px;
+    }
+    50% {
+        margin-top: -6px;
+        margin-bottom: 21px;
+    }
+    75% {
+        margin-top: -3px;
+        margin-bottom: 18px;
+    }
+    100% {
+        margin-top: 0;
+        margin-bottom: 15px;
+    }
+}
+
+.funnel {
+    margin: 25px auto;
+}
+
+.drop {
+    position: relative;
+    margin-top: -100px;
+    animation: rain 5s infinite;
+    visibility: hidden;
+    z-index: 10;
+}
+
+@keyframes rain {
+    0% {
+        margin-top: -100px;
+        visibility: hidden;
+    }
+    10% {
+        margin-top: -95px;
+        visibility: visible;
+    }
+    20% {
+        margin-top: -93px;
+        visibility: visible;
+    }
+    25% {
+        margin-top: -91px;
+        visibility: visible;
+    }
+    65% {
+        margin-top: -64px;
+        visibility: visible;
+    }
+    66% {
+        margin-top: -60px;
+        visibility: hidden;
+    }
+    100% {
+        margin-top: -100px;
+        visibility: hidden;
+    }
+}
+
+
+/*****floating button *****/
+
+.floating {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -2px;
+    z-index: 10000;
+}
+
+.floating a {
+    color: #fff !important;
+}
+
+.float-btn p {
+    display: inline-block;
+    background: #ff6e01;
+    color: #fff;
+    padding: 0 10px;
+    font-size: 25px;
+    line-height: 40px;
+    margin-bottom: 3px;
+}
+
+.wechat span {
+    display: none;
+    position: fixed;
+    top: 35%;
+    right: 60px;
+    width: 200px;
+    height: auto;
+    padding: 0;
+    margin: 0;
+    background: #fd0;
+    box-shadow: 0px 0px 15px #000;
+}
+
+.float-btn img {
+    display: block;
+}
+
+.float-btn p:focus,
+.float-btn p:hover,
+.float-btn span:focus,
+.float-btn span:hover {
+    cursor: pointer;
+}
+
+.wechat:hover>span,
+.wechat:focus>span {
+    display: block;
+}
+
+
+/* homepage three column */
+
+.column {
+    display: block;
+    float: left;
+    padding: 0 3%;
+}
+
+
+/* Clear floats after the columns */
+
+.row:after {
+    content: "";
+    clear: both;
+}
+
+.column-banner {
+    margin: 0 auto 80px auto;
+    width: 80%;
+}
+
+.column-icon .fa,
+.column-icon .far,
+.column-icon .fas {
+    font-size: 75px;
+    color: #1EB0BC;
+    margin: 40px auto;
+}
+
+.column-icon .fa:hover,
+.column-icon .far:hover,
+.column-icon .fas:hover,
+.column-icon .fa:focus,
+.column-icon .far:focus,
+.column-icon .fas:focus {
+    margin: 20px auto 60px auto;
+}
+
+.column-title,
+.column-header,
+.column-icon,
+.column-text,
+.data-text {
+    text-align: center;
+}
+
+.column-text {
+    text-align: justify;
+}
+
+.column-btn {
+    color: #1EB0BC;
+    text-align: center;
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+    border: 1px solid #1EB0BC;
+    padding: 8px 15px;
+}
+
+.column-btn:hover {
+    background: #1EB0BC;
+    border: 1px solid #1EB0BC;
+    color: #FFF;
+}
+
+.data-text {
+    margin-bottom: 60px;
+    padding: 0 10%;
+}
+
+.phone-banner {
+    margin: 80px 0;
+}
+
+.phone-banner-left-column {
+    float: left;
+    padding-left: 10%;
+}
+
+.phone-banner-right-column {
+    float: right;
+    padding-right: 10%;
+}
+
+.phone-banner-row-text {
+    margin-top: 25%;
+    padding: 0 15px;
+}
+
+.phone-banner img {
+    width: 50%;
+    display: block;
+    margin: 0 auto;
+}
+
+.phone-banner-row-text span {
+    font-weight: bold;
+}
+
+.phone-circle-1 {
+    position: absolute;
+    top: 20%;
+    left: 25%;
+    z-index: 100;
+    background-color: white;
+}
+
+.phone-circle-2 {
+    position: absolute;
+    top: 60%;
+    left: 62%;
+    z-index: 100;
+    background-color: white;
+}
+
+.phone-circle-3 {
+    position: absolute;
+    top: 20%;
+    left: 44%;
+    z-index: 100;
+    background-color: white;
+}
+
+.phone-circle-4 {
+    position: absolute;
+    top: 60%;
+    left: 7%;
+    z-index: 100;
+    background-color: white;
+}
+
+.phone-banner .circleText {
+    line-height: 28px;
+    padding-top: 45px;
+}
+
+.phone-banner .circle {
+    width: 150px;
+    height: 150px;
+}
+
+.phone-banner .circleRow {
+    width: 100%;
+}
+
+.phone-banner-row {
+    margin: 60px 0;
+}
+
+.phone-circle.animated {
+    -webkit-animation-name: fadeInUp;
+    animation-name: fadeInUp;
+    -webkit-animation-duration: 1.5s;
+    animation-duration: 1.5s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-delay: 0.5s;
+    animation-delay: 0.5s;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 10%, 0);
+        transform: translate3d(0, 10%, 0);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
+.logoBanner {
+    background-color: #F2F2F2;
+    padding-bottom: 80px;
+}
+
+.logoRow {
+    clear: both;
+    width: 80%;
+    margin: 0px auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.hospital-logo .front {
+    display: block;
+    width: 260px;
+    height: 200px;
+    float: left;
+    margin: 20px 40px;
+    box-shadow: 0px 5px 3px #D4D4D4;
+}
+
+.hospital-logo .front img {
+    position: relative;
+    width: 90%;
+    top: 50%;
+    left: 50%;
+    margin-top: -80px;
+    /* Half the height */
+    margin-left: -130px;
+    /* Half the width */
+}
+
+.contact-form input[type="text"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #1EB0BC;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+.contact-form .caption-read-more {
+    background: linear-gradient(#FBB450, #F89406);
+    color: white;
+    padding: 6px 20px;
+    cursor: pointer;
+    display: block;
+    width: 240px;
+    margin: 24px auto;
+    vertical-align: middle;
+}
+
+.contact-form .caption-read-more:hover,
+.contact-form .caption-read-more:focus {
+    border: 1px solid white;
+}
+
+.contact-form-title {
+    font-size: 1.5em;
+    font-weight: 400;
+    line-height: 22px;
+    text-align: center;
+    color: #FFF;
+}
+
+.contact-banner {
+    background-color: #1EB0BC;
+}
+
+.contact-title,
+.contact-form {
+    width: 50%;
+    margin: 80px auto;
+}
+
+
+/****flip card****/
+
+.tophospRank,
+.hospital-logo {
+    -webkit-perspective: 1000;
+    -moz-perspective: 1000;
+    -o-perspective: 1000;
+    perspective: 1000;
+}
+
+.tophospRank:hover .flipper,
+.hospital-logo:hover .flipper {
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+
+.flipper {
+    -webkit-transition: 0.6s;
+    -webkit-transform-style: preserve-3d;
+    -moz-transition: 0.6s;
+    -moz-transform-style: preserve-3d;
+    -o-transition: 0.6s;
+    -o-transform-style: preserve-3d;
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+.flipper .front,
+.flipper .back {
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.flipper .back {
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.flipper .front {
+    z-index: 2;
+    display: inline-block;
+    position: relative;
+    background: #f2f2f2;
+    box-shadow: 5px 5px 3px #D4D4D4;
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -o-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+}
+
+
+/********Compare Hospital tags**************/
+
+.tags input {
+    display: none;
+}
+
+tags-input .tags {
+    border: 0;
+    box-shadow: none;
+    background-color: #f8f8f8;
+}
+
+tags-input .tags .tag-item {
+    background: #FFC300;
+    border: 1px solid #FFC300;
+    border-radius: 0;
+    color: #FFF;
+}
+
+tags-input:focus {
+    outline: none;
+}
+
+tags-input .tags .tag-item .remove-button {
+    color: #FFF;
+}
+
+.hosp-tags {
+    float: left;
+}
+
+
+/********Compare Hospital table**************/
+
+#compareArea td,
+#compareArea th {
+    text-align: center;
+    vertical-align: middle;
+}
+
+#compareArea tbody tr>:first-child {
+    text-align: left;
+}
+
+#compareArea thead th {
+    background-color: #EEEEEE;
+    color: white;
+    opacity: 0.8;
+    font-weight: bold;
+    line-height: 2em;
+    text-align: center;
+}
+
+#compareArea tbody {
+    background-color: #E3F5F7;
+}
+
+#compareArea table {
+    border: 1px solid #ddd;
+}
+
+#compareArea tbody tr {
+    border-bottom: 1px solid #ddd;
+}
+
+#compareArea td,
+#compareArea thead th,
+#compareArea tbody th {
+    border-left: 1px solid #ddd;
+}
+
+#compareArea tbody>:last-child {
+    background-color: #F2F2F2;
+}
+
+#compareArea table .moreLink {
+    width: 40px;
+    height: 10px;
+    animation: arrowDown 2s infinite;
+}
+
+#compareArea table .lessLink {
+    width: 40px;
+    height: 10px;
+    animation: arrow 2s infinite;
+}
+
+#compareArea .btn-primary {
+    width: 150px;
+    margin: 0 auto;
+}
+
+.area.radar-chart-serie0 {
+    fill: #CD56C4;
+}
+
+.hosp_logo {
+    width: 180px;
+    height: auto;
+    max-width: 100%;
+}
+
+.tophospRank:last-child {
+    display: block;
+    padding-left: 20px;
+    padding-top: 0;
+}
+
+.navbar-fixed-bottom .container-fluid {
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+#compareURL {
+    background-color: #1EB0BC;
+    margin: 10px;
+    color: #fff;
+    animation-name: glow;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-delay: 3s;
+}
+
+@keyframes glow {
+    0% {
+        box-shadow: 2px 2px 3px #fff;
+    }
+    25% {
+        box-shadow: 2px 2px 3px #fff, 0 0 20px #1eb0bc;
+    }
+    50% {
+        box-shadow: 2px 2px 3px #fff, 0 0 20px #3ABAC4, 0 0 30px #56C4CD;
+    }
+    100% {
+        box-shadow: 2px 2px 3px #fff;
+    }
+}
+
+.radar-chart .axis .legend.left {
+    text-anchor: star;
+    dominant-baseline: text-after-edge;
+}
+
+.radar-chart .axis .legend.right {
+    text-anchor: star;
+    dominant-baseline: text-before-edge;
+}
+
+@keyframes arrow {
+    0% {
+        margin-top: 0;
+        margin-bottom: 15px;
+    }
+    25% {
+        margin-top: -3px;
+        margin-bottom: 18px;
+    }
+    50% {
+        margin-top: -6px;
+        margin-bottom: 21px;
+    }
+    75% {
+        margin-top: -3px;
+        margin-bottom: 18px;
+    }
+    100% {
+        margin-top: 0;
+        margin-bottom: 15px;
+    }
+}
+
+@keyframes arrowDown {
+    0% {
+        margin-bottom: -20px;
+    }
+    25% {
+        margin-bottom: -17px;
+    }
+    50% {
+        margin-bottom: -14px;
+    }
+    75% {
+        margin-bottom: -17px;
+    }
+    100% {
+        margin-bottom: -20px;
+    }
+}
+
+#compareArea .slider {
+    width: 50%;
+}
+
+#compareArea .slider-selection {
+    background: linear-gradient(to bottom, #e5e5e5 0, #e9e9e9 100%);
+}
+
+#compareArea .slider-track-high {
+    background: linear-gradient(to bottom, #f5f5f5 0, #f9f9f9 100%);
+    box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+}
+
+
+/********honor section**************/
+
+.honorBanner {
+    width: 1170px;
+    margin: 0 auto;
+    padding-bottom: 80px;
+    padding-right: 2%;
+    clear: both;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.honor-widget-block {
+    width: 350px;
+    height: 262px;
+    float: left;
+    margin-left: 2%;
+    margin-top: 20px;
+}
+
+.honor-block-wrap {
+    position: relative;
+}
+
+.honor-block-wrap .slides {
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.honor-block-wrap .slides .honor-img-wrap {
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    transform: translateY(0);
+    -webkit-transition: -webkittransform 1s ease 0s;
+    -moz-transition: -moz-transform 1s ease 0s;
+    transition: transform 1s ease 0s;
+}
+
+.honor-block-wrap .bx-slider {
+    margin-left: -3%;
+}
+
+.honor-title {
+    background: none repeat scroll 0 0 #f9f8f8;
+    line-height: 36px;
+    font-size: 16px;
+    padding: 10px;
+}
+
+.honor-content-wrap {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    -webkit-transform: translateY(220px);
+    -moz-transform: translateY(220px);
+    transform: translateY(220px);
+    width: 100%;
+    height: 100%;
+    -webkit-transition: -webkit-transform 1.5s ease 0s;
+    -moz-transition: -moz-transform 1.5s ease 0s;
+    transition: transform 1.5s ease 0s;
+    background: rgba(0, 0, 0, 0.6);
+    text-align: center;
+    color: #ffffff;
+}
+
+.honor-block-wrap .slides:hover .honor-content-wrap {
+    -webkit-transform: translateY(0px);
+    -moz-transform: translateY(0px);
+    transform: translateY(0px);
+    -webkit-transition: -webkit-transform 1s ease 0s;
+    -moz-transition: -moz-transform 1s ease 0s;
+    transition: transform 1s ease 0s;
+}
+
+.honor-content-wrap .honor-title {
+    color: #ffffff;
+    line-height: 22px;
+    text-align: center;
+    background: none;
+}
+
+.honor-img-wrap .honor-title {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.honor-content {
+    font-size: 12px;
+    line-height: 17px;
+    margin: 10px 0;
+    padding: 0 10px;
+}
+
+.honor-link-wrap a {
+    border: 1px solid #fff;
+    color: #fff;
+    display: inline-block;
+    font-size: 12px;
+    height: 24px;
+    line-height: 20px;
+    margin-right: 2px;
+    width: 24px;
+}
+
+.honor-block-wrap .bx-controls.bx-has-pager {
+    line-height: 5px;
+    position: absolute;
+    right: 0;
+    text-align: right;
+    top: 5px;
+    width: 50%;
+}
+
+.honor-block-wrap .bx-wrapper .bx-pager {
+    text-align: right;
+}
+
+
+/*****two category banner**************/
+
+.two-banner {
+    background-color: #f2f2f2;
+}
+
+.two-banner-block {
+    background-color: white;
+    margin: 40px 0 80px 0;
+    padding: 40px 60px;
+    /*border: 1px solid #141414;*/
+}
+
+.two-banner-block img {
+    display: block;
+    margin: 0 auto;
+}
+
+.two-banner-left-column img {
+    width: 50%;
+}
+
+.two-banner-right-column img {
+    width: 70%;
+}
+
+.two-banner-block h3 {
+    font-weight: bold;
+    padding: 20px;
+}
+
+.two-banner a {
+    color: #141414;
+}
+
+.two-banner a:hover {
+    text-decoration: none;
+}
+
+
+/*******Disease info page******/
+
+.ls-disease-area-logo {
+    width: 180px;
+    hight: 180px;
+}
+
+.ls-disease-btn {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 0;
+    color: #1EB0BC;
+    padding: 15px;
+}
+
+.ls-disease-btn:hover,
+.disease-letters a:hover {
+    background-color: #1EB0BC;
+    color: #fff! important;
+    text-decoration: none;
+}
+
+.ls-disease-title {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.ls-disease-chevron-right {
+    float: right;
+}
+
+.ls-disease-tab-content {
+    width: 100%;
+    float: none;
+}
+
+#disease-view-by .nav-pills>li.active>a {
+    background-color: #1EB0BC;
+}
+
+#disease-view-by .nav-pills>li>a {
+    border-radius: 0;
+    font-size: 20px;
+    padding: 20px;
+    margin: 0 0 0 0! important;
+}
+
+#disease-view-by .nav-pills {
+    margin: 0 0 20px 0;
+}
+
+.disease-letters a {
+    display: block;
+    width: 35px;
+    margin: 0 3px 10px 3px;
+    float: left;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 5px 0;
+}
+
+
+/*******popup window****/
+
+.modal-header {
+    border-bottom: none;
+    background-color: #1EB0BC;
+}
+
+.modal-title {
+    color: white;
+    padding: 12px 0 24px 0;
+    font-weight: bold;
+}
+
+.close {
+    opacity: 0.5;
+}
+
+#ls-dmodal-content1 {
+    padding: 15px;
+}
+
+.modal-body .btn-danger {
+    padding: 10px 72px;
+    border-radius: 0;
+    font-weight: bold;
+}
+
+.modal-body .btn-danger:hover {
+    background-color: white;
+    color: #d9534f;
+    font-size: 18px;
+}
+
+
+/****Ranking Data Page********/
+
+.ls-daranking-hosp {
+    padding: 20px 0;
+}
+
+.rank-da-hosp-rank {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.rank-da-hosp-name {
+    font-weight: bold;
+}
+
+.rank-da-hosp-expertise {
+    color: #bebebe;
+    font-weight: bold;
+    margin-top: -15px;
+}
+
+.single-product .posted-on,
+.single-product .nav-next,
+.single-product .nav-previous {
+    visibility: hidden;
+}
+
+.single-product select {
+    padding: 5px;
+}
+
+.co-sum {
+    display: block;
+    margin: 40px auto;
+    width: 70%;
+}
+
+.co-sum-col {
+    background-color: #100A0A;
+    display: block;
+    width: 33%;
+    float: left;
+    padding: 28px 72px;
+    text-align: center;
+    font-size: 20px;
+    color: #fff;
+}
+
+.co-sum-num {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.co-sum-col:first-child .co-sum-num {
+    color: #1e73be;
+}
+
+.co-sum-col:last-child .co-sum-num {
+    color: #88DD33;
+}
+
+.co-sum-col:nth-child(2) .co-sum-num {
+    color: #dd3333;
+}
+
+.su-tabs-nav span {
+    width: 32%;
+    text-align: center;
+    font-weight: bold;
+}
+
+.expertise .su-tabs-nav span {
+    width: 49%;
+    text-align: center;
+    font-weight: bold;
+}
+
+
+/******Report Page******/
+
+.report-container {
+    width: 100%;
+    margin: 80px auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.report-container .row {
+    padding: 40px;
+}
+
+.report-nav-tab {
+    margin-left: 0em;
+}
+
+.report-nav-tab li {
+    width: 25%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 24px;
+    margin-top: 80px;
+}
+
+.report-nav-tab>li.active>a,
+.report-nav-tab>li.active>a:focus,
+.report-nav-tab>li.active>a:hover {
+    background-color: #1eb0bc;
+    color: white;
+    border: 1px solid #1eb0bc;
+}
+
+.report-nav-tab>li>a {
+    border-radius: 0;
+    border: 1px solid #1eb0bc;
+    margin-right: 0px;
+    transition: 0.5s;
+}
+
+.report-nav-tab>li>a:hover {
+    background-color: #1eb0bc;
+    color: white;
+    border: 1px solid #1eb0bc;
+}
+
+.report-container .learn-more {
+    position: relative;
+    height: 50px;
+    width: 200px;
+    margin: 40px auto;
+    background-color: #1eb0bc;
+    font-size: 20px;
+    color: white;
+    display: block;
+}
+
+.report-container .learn-more:hover {
+    background-color: white;
+    color: #1EB0BC;
+    border: 2px solid #1EB0BC;
+}
+
+
+/****slider****/
+
+.carousel {
+    background-color: #E3F5F7;
+}
+
+.carousel .carousel-item {
+    min-height: 330px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.carousel .carousel-item .img-box {
+    height: 160px;
+    width: 100%;
+    position: relative;
+}
+
+.carousel .carousel-item img {
+    max-width: 100%;
+    max-height: 100%;
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+}
+
+.carousel .carousel-item h4 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.carousel .carousel-item .btn {
+    color: #333;
+    border-radius: 0;
+    font-size: 11px;
+    text-transform: uppercase;
+    font-weight: bold;
+    background: none;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    margin: 5px auto;
+    line-height: 16px;
+}
+
+.carousel .carousel-item .btn:hover,
+.carousel .carousel-item .btn:focus {
+    color: #fff;
+    background: #1eb0bc;
+    border-color: #1eb0bc;
+    box-shadow: none;
+}
+
+.carousel .carousel-item .btn i {
+    font-size: 14px;
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+.carousel .thumb-wrapper {
+    text-align: center;
+}
+
+.carousel .thumb-content {
+    padding: 15px;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    height: 100px;
+    width: 40px;
+    background: none;
+    margin: auto 0;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.carousel-control-prev i,
+.carousel-control-next i {
+    font-size: 30px;
+    position: absolute;
+    top: 50%;
+    display: inline-block;
+    margin: -16px 0 0 0;
+    z-index: 5;
+    left: 0;
+    right: 0;
+    color: rgba(0, 0, 0, 0.8);
+    text-shadow: none;
+    font-weight: bold;
+}
+
+.carousel-control-prev i {
+    margin-left: -3px;
+}
+
+.carousel-control-next i {
+    margin-right: -3px;
+}
+
+.carousel .hosp-description {
+    font-size: 13px;
+    padding: 2px 0;
+}
+
+.carousel .hosp-description strike {
+    color: #999;
+    margin-right: 5px;
+}
+
+.carousel .hosp-description span {
+    color: #86bd57;
+    font-size: 110%;
+}
+
+.carousel .carousel-indicators {
+    bottom: -50px;
+}
+
+.carousel-indicators li,
+.carousel-indicators li.active {
+    width: 10px;
+    height: 10px;
+    margin: 4px;
+    border-radius: 50%;
+    border-color: transparent;
+    border: none;
+}
+
+.carousel-indicators li {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.carousel-indicators li.active {
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.hospital-description li {
+    padding: 0;
+}
+
+.hospital-description i {
+    font-size: 14px;
+    color: #ffc000;
+}
+
+
+/* IBM bot WAC: IBM bot css was injected after our lsmed.css so we need use "!important" to keep the style*/
+
+#WACContainer.WACContainer .WAC__headerContainer {
+    color: white !important;
+}
+
+#WACContainer.WACContainer .WAC__homeScreen-greeting {
+    font-size: 16px !important;
+}
+
+#WACContainer.WACContainer .ibm-web-chat--card-home-screen .WAC__homeScreen-starter-text {
+    font-size: 16px !important;
+    color: #525252 !important;
+}
+
+#WACContainer.WACContainer .ibm-web-chat--card-home-screen .WAC__homeScreen-starter-icon {
+    color: #525252 !important;
+}
+
+.dkw {
+    color: #1EB0BC;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.table-striped>tbody>tr:nth-of-type(odd) {
+    background-color: white;
+}
+
+.table>tbody>tr>td {
+    border-top: none;
+}
+
+.panel-default {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+/***media query***/
+
+@media (max-width: 1140px) {
+    .honorBanner {
+        width: 100%;
+    }
+    .logoRow {
+        width: 95%;
+    }
+    .hospital-logo .front {
+        margin: 15px 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .circle {
+        width: 128px;
+        height: 128px;
+        margin: 10px 10px 50px 10px;
+    }
+    .circleText {
+        line-height: 128px;
+    }
+    .circleRow,
+    .hospital-log .front {
+        width: 96%;
+    }
+    #pgc-19-0-0 {
+        height: 244px;
+    }
+    .floating {
+        top: 300px;
+    }
+    .searchBar {
+        top: 0;
+        width: 90%;
+    }
+    .phone-banner .circle {
+        width: 120px;
+        height: 120px;
+    }
+    .phone-banner .circleText {
+        line-height: 14px;
+        padding-top: 30px;
+    }
+    .phone-banner-left-column {
+        float: right;
+        padding-left: 0;
+    }
+    .phone-banner-right-column {
+        float: left;
+        padding-right: 0;
+    }
+    .phone-circle-1 {
+        left: 5%;
+    }
+    .phone-circle-2 {
+        left: 52%;
+    }
+    .phone-circle-3 {
+        left: 52%;
+    }
+    .contact-title,
+    .contact-form {
+        width: 80%;
+    }
+    .hospital-logo .front {
+        width: 120px;
+        height: 90px;
+        margin: 20px 10px;
+    }
+    .logoRow {
+        width: 90%;
+    }
+    .hospital-logo .front img {
+        margin-top: -40px;
+        /* Half the height */
+        margin-left: -50px;
+        /* Half the width */
+    }
+    .honor-title {
+        padding: 6px;
+    }
+    .honorBanner {
+        padding-right: 2%;
+    }
+    .honor-widget-block {
+        width: 240px;
+        height: 180px;
+        margin-left: 2%;
+    }
+    .honor-content-wrap {
+        -webkit-transform: translateY(145px);
+        -moz-transform: translateY(145px);
+        transform: translateY(145px);
+    }
+    .ls-disease-btn {
+        padding: 15px 10px;
+        margin-bottom: 10px;
+    }
+    .container {
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+    .disease-letters a {
+        margin: 5px 3px 5px 3px;
+    }
+    .disease-letters {
+        white-space: normal;
+    }
+    .co-sum {
+        width: 80%;
+    }
+    .co-sum-col {
+        padding: 20px 40px;
+        font-size: 16px;
+    }
+    .co-sum-num {
+        font-size: 30px;
+    }
+    .su-tabs-mobile-stack span {
+        display: inline-block! important;
+        margin-right: 0! important;
+        padding: 10px 10px! important;
+    }
+    .cd-timeline-item-title {
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .logoRow {
+        width: 100%;
+    }
+    .hospital-logo .front {
+        width: 100px;
+        height: 75px;
+        margin: 10px 5px;
+    }
+    .hospital-logo .front img {
+        margin-top: -35px;
+        margin-left: -55px;
+        /* Half the width */
+    }
+    .honor-title {
+        padding: 3px;
+        font-size: 12px;
+    }
+    .honorBanner {
+        padding-right: 10px;
+    }
+    .honor-widget-block {
+        width: 150px;
+        height: 112px;
+        margin-left: 10px;
+    }
+    .honor-content-wrap {
+        -webkit-transform: translateY(88px);
+        -moz-transform: translateY(88px);
+        transform: translateY(88px);
+    }
+    .ls-disease-btn {
+        padding: 15px 5px 15px 0;
+    }
+    .container {
+        padding-right: 0px;
+        padding-left: 0px;
+    }
+    #disease-view-by .col-xs-6 {
+        padding-right: 5px;
+        padding-left: 5px;
+    }
+    .ls-disease-title:hover {
+        white-space: normal;
+        overflow: visible;
+        text-overflow: initial;
+    }
+    .co-sum {
+        width: 100%;
+    }
+    .co-sum-col {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+    .co-sum-num {
+        font-size: 20px;
+    }
+    .cd-timeline-item-title {
+        font-size: 20px;
+    }
+}

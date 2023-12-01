@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disease Info</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap.vertical-tabs.min.css">
+    <link rel="stylesheet" href="bootstrap-multiselect.css">
+    <link rel="stylesheet" href="ngProgress.css">
+    <link rel="stylesheet" href="http://mbenford.github.io/ngTagsInput/css/ng-tags-input.min.css" />
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="lsmed.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/globalize/1.4.0/globalize-runtime.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://www.amcharts.com/lib/4/core.js"></script>
+    <script src="https://www.amcharts.com/lib/4/charts.js"></script>
+    <script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
+    <script src="jvenn.min.js"></script>
+    <script type="text/javascript" src="bootstrap-multiselect.js"></script>
+    <script type="text/javascript" src="angular-bootstrap-multiselect.js"></script>
+    <script type="text/javascript" src="jquery.blockUI.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyChLxtQM2oKlrIfboGL3bhw0sQOKTmPsvQ"></script>
+    <script src="ngProgress.min.js"></script>
+    <script src="http://mbenford.github.io/ngTagsInput/js/ng-tags-input.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="lsmed.js"></script>
+
+    <style>
+        .ls-disease-btn {
+            width: 100%;
+            text-align: left;
+            margin-bottom: 10px;
+        }
+        
+        .ls-disease-chevron-right {
+            float: right;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Please put it into the wordpress editor.</h1>
+        <br>
+        <div id="disease-view-by">
+            <ul class="nav nav-pills nav-justified">
+                <li class="active"><a href="#byArea" data-toggle="tab">View by Disease Area</a></li>
+                <li><a href="#tabByAZ" data-toggle="tab">View by A-Z</a></li>
+            </ul>
+            <div class="tab-content clearfix ls-disease-tab-content" style="width:100%; float: none;">
+                <div id="byArea" class="tab-pane active"></div>
+                <div id="tabByAZ" class="tab-pane">
+                    <div id="alphabetical-nav-filter-nav" class="listNav text-center">
+                        <div class="disease-letters">
+                            <a class="all" href="#" style="">All</a><a class="a" href="#">A</a><a class="b" href="#">B</a><a class="c" href="#">C</a><a class="d" href="#">D</a><a class="e" href="#">E</a><a class="f" href="#">F</a><a class="g" href="#">G</a>
+                            <a
+                                class="h" href="#">H</a><a class="i" href="#">I</a><a class="j" href="#">J</a><a class="k" href="#">K</a><a class="l" href="#">L</a><a class="m" href="#">M</a><a class="n" href="#">N</a><a class="o" href="#">O</a><a class="p" href="#">P</a>
+                                <a
+                                    class="q" href="#">Q</a><a class="r" href="#">R</a><a class="s" href="#">S</a><a class="t" href="#">T</a><a class="u" href="#">U</a><a class="v" href="#">V</a><a class="w" href="#">W</a><a class="x" href="#">X</a><a class="y" href="#">Y</a>
+                                    <a
+                                        class="z" href="#">Z</a>
+                        </div>
+                    </div>
+                    <div id="byAZ">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal -->
+        <div id="diseaseModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h3 class="modal-title text-center" id="ls-dmodal-title"></h3>
+                    </div>
+                    <div id="ls-dmodal-content1"></div>
+
+                    <div class="modal-body">
+                        <p class="text-center">To find the best hospital for this disease</p><br>
+                        <div class="call_haiel text-center"><a href="#" class="btn btn-danger" role="button">Talk to HAIEL</a></div><br>
+                        <div class="text-center"><a href="#" id="viewDiseaseLink" target="_blank" class="text-center">More about this disease</a></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>s
